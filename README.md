@@ -1,4 +1,5 @@
 # MsDnsExport
+
 ### Export Boot file / Active Directory zones from Microsoft DNS server
 
 This tool is especially useful if you have a large number of DNS zones stored in 
@@ -7,7 +8,7 @@ to another DNS server platform.
 
 ![screen shot](https://raw.githubusercontent.com/jhsoftware/MsDnsExport/master/screenshot.png)
 
-#### The tool can do two things:
+### The tool can do two things:
 
 * Generate a standard Boot file (very simple text file format which is understood
 by most DNS servers / migration tools).
@@ -17,7 +18,7 @@ standard DNS zone files with just one click.
 All exported files are saved to Microsoft DNS server's standard data directory -
 typically 'c:\windows\system32\dns'.
 
-#### You probably **don't** need this tool if:
+### You probably **don't** need this tool if:
 
 * None of your DNS zones are stored in Active Directory. In this case you can simply
 configure Microsoft DNS server to 'load from file' 
@@ -26,8 +27,13 @@ which will generate a standard boot file.
 * You only need to export a few zones from Active Directory. In this case just use 
 `dnscmd.exe /ZoneExport <zone-name> <file-name>`
 
+### Background
+
+This tool was originally developed to make it easier for users migrating from Microsoft DNS to
+[Simple DNS Plus](http://simpledns.com), but it is released to the public domain and may
+be used for any purpose.
   
-#### Requirements
+### Requirements
 
 * Windows Server 2003 or later with Microsoft's DNS server feature enabled.
 * .NET Framework v. 2.0 / 3.5
@@ -38,8 +44,17 @@ which will generate a standard boot file.
 [instructions here](https://technet.microsoft.com/en-us/library/cc755948(v=ws.10).aspx).
   * On Windows Server 2008 and later it is installed automatically when the DNS Server feature is enabled.
 
-### Background
+### Download / Installation
 
-This tool was originally developed to make it easier for users migrating from Microsoft DNS to
-[Simple DNS Plus](http://simpledns.com), but it is released to the public domain and may
-be used for any purpose.
+Download the latest binary from <https://github.com/jhsoftware/MsDnsExport/releases> and run it.
+
+### Source code / Git repository
+
+See <https://github.com/jhsoftware/MsDnsExport>
+
+Contributions are most welcome. Fork the repository, create a branch, commit your changes, push, and submit a pull request.
+Or just e-mail us the changes :-)
+
+### License
+
+See the [LICENSE](LICENSE) file
